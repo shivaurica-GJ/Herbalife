@@ -30,7 +30,7 @@ const ProductDetail = () => {
 
   const handleWhatsAppOrder = () => {
     const message = `Hi Bhavin! I'm interested in ordering ${product.name}. Can you help me with the details?`;
-    const url = `https://wa.me/919876543210?text=${encodeURIComponent(
+    const url = `https://wa.me/917069013316?text=${encodeURIComponent(
       message
     )}`;
     window.open(url, "_blank");
