@@ -139,7 +139,7 @@ const ProductDetail = () => {
                 Order via WhatsApp
               </button>
               <a
-                href="tel:+919876543210"
+                href="tel:+917069013316"
                 className="flex-1 border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200 text-center"
               >
                 {translations.callToOrder}
