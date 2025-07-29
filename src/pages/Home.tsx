@@ -47,9 +47,9 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="public/images/hero.png"
+                src="public/images/Transprent_Hero.png"
                 alt="Bhavin Kapadiya"
-                className="rounded-lg shadow-1xl"
+                className="h-[500px] rounded-lg shadow-1xl"
               />
               {/* <div className="absolute -bottom-6 -left-6 bg-white text-green-600 p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">

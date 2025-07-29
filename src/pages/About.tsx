@@ -1,24 +1,75 @@
-import React from "react";
 import { Award, Heart, Target, Users, CheckCircle } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { aboutTranslations } from "../contexts/AboutTranslations"; // Import the translations
+import { aboutTranslations } from "../contexts/AboutTranslations";
 
 const About = () => {
   const { language } = useLanguage();
-  const t = aboutTranslations[language]; // Get translations for current language
+  const t = aboutTranslations[language];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
+      {/* Hero Image Section */}
+      <section className="relative h-[40vh] w-full">
+        <img
+          src="/images/Team.png"
+          alt="About Herbalife"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white">
+            {t.heroTitle}
+          </h1>
+        </div>
+      </section>
+
+      {/* CEO Section */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              {t.heroTitle}
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              {t.heroSubtitle}
-            </p>
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <img
+                src="/images/CEO.png"
+                alt="CEO"
+                className="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                {t.ceoTitle}
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">{t.ceoName}</p>
+              <div className="space-y-4 text-gray-600">
+                {t.ceoMessage.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Manager Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2 order-2 md:order-1">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                {t.managerTitle}
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">{t.managerName}</p>
+              <div className="space-y-4 text-gray-600">
+                {t.managerMessage.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+            <div className="md:w-1/2 order-1 md:order-2">
+              <img
+                src="/images/Manager.png"
+                alt="Manager"
+                className="rounded-lg shadow-xl w-full h-auto max-h-[500px] object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
