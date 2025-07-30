@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Star, Users, Award, ArrowRight, CheckCircle } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
